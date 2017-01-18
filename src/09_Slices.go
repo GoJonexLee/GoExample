@@ -33,6 +33,8 @@ func main() {
 	fmt.Println("sl2:", t)					// 从s1的下标开始，到s1的末尾
 
 	twoD := make([][]int, 3)				// 3行二维切片，需要手动初始化
+	fmt.Println(twoD)
+
 	for i := 0; i < 3; i++ {
 		innerLen := i + 1
 		twoD[i] = make([]int, innerLen)		// 每一纬度的长度不相同，切片中的原始值为0
