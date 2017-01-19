@@ -12,11 +12,12 @@ func main() {
 
 	switch i {
 	case 1:
-		fmt.Println("one")
+		fmt.Println("one")					// 执行完case逻辑块后，会自动跳出switch语句，不用使用break
 	case 2:
 		fmt.Println("two")
+		fallthrough							// switch专属关键字，表明不跳出switch，直接执行下一个case逻辑块，而不用判断是否匹配下一个case后的语句
 	case 3:
-		fmt.Println("three")
+		fmt.Println("three")				// 因为case 2逻辑块有fallthrough关键字，所以该行代码一定会执行，而不用判断case 3这条语句
 	default:								// default的位置可以任意摆放，而不用放在最后。
 		fmt.Println("hehe")
 	}
