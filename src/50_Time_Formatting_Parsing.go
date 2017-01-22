@@ -15,7 +15,7 @@ func main() {
 	t1, e := time.Parse(time.RFC3339, "2017-01-21T00:31:50+00:00")
 	p(t1)
 
-	p(t.Format("3:04PM"))	// 3:04PM or 15:04
+	p(t.Format("3:04PM")) // 3:04PM or 15:04
 	p(t.Format("Mon Jan _2 15:04:05 2006"))
 	p(t.Format("2006-01-02T15:04:05.999999-07:00"))
 

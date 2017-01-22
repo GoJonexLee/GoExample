@@ -15,10 +15,10 @@ import "math"
 
 */
 
-const s string = "LuoJiLab"		// 定义常量s
-const t = "LuoJi"				// go会根据"LuoJi"推断出t的类型
+const s string = "LuoJiLab" // 定义常量s
+const t = "LuoJi"           // go会根据"LuoJi"推断出t的类型
 
-const (							// 可以将常量组织在const()中
+const ( // 可以将常量组织在const()中
 	a = 1
 	b = 2
 	c = 2.0
@@ -34,7 +34,7 @@ func main() {
 
 	fmt.Println(d)
 
-	fmt.Println(int64(d))		// 整数之间可以直接通过type()的方式进行类型转换
+	fmt.Println(int64(d)) // 整数之间可以直接通过type()的方式进行类型转换
 
 	fmt.Println(math.Sin(n))
 }

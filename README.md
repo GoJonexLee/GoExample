@@ -1,13 +1,14 @@
 example来源于：https://gobyexample.com <br/>
 除此之外，有很大的补充 <br/>
 
-01: 你好同志<br/>
-02: 值<br/>
-03: 变量<br/>
-04: 常量<br/>
-05: for循环<br/>
-06: if else 语句<br/>
-07: switch 语句<br/>
+00: 你好同志<br/>
+01: 值<br/>
+02: 变量<br/>
+03: 常量<br/>
+04: for循环<br/>
+05: if else 语句<br/>
+06: switch 语句<br/>
+07: 字符串<br/>
 08: 数组<br/>
 09: 切片<br/>
 10: 字典，key-value<br/>
@@ -54,4 +55,16 @@ example来源于：https://gobyexample.com <br/>
 51: 伪随机数<br/>
 52: 数字个数化<br/>
 53: url解析<br/>
+54: 哈希<br/>
+55: base64编解码<br/>
 56: 读文件<br/>
+57: 行读取输入<br/>
+58: 命令行参数<br/>
+59: 命令行标签<br/>
+60: 环境变量<br/>
+61: 子进程<br/>
+62: 系统调用<br/>
+63: 监听信号<br/>
+64: 退出<br/>
+65: mysql<br/>
+66: redi是<br/>

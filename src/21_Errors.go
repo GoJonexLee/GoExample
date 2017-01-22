@@ -22,12 +22,12 @@ type argError struct {
 }
 
 func (e *argError) Error() string {
-	return fmt.Sprintf("%d - %s", e.arg, e.prob)		//Sprintf()函数根据格式化以及参数列表返回字符串
+	return fmt.Sprintf("%d - %s", e.arg, e.prob) //Sprintf()函数根据格式化以及参数列表返回字符串
 }
 
 func f2(arg int) (int, error) {
 	if arg == 42 {
-		return -1, &argError{arg, "can't work with it"}	// 由于*argError实现了error接口，因此可以被当作error类型返回
+		return -1, &argError{arg, "can't work with it"} // 由于*argError实现了error接口，因此可以被当作error类型返回
 	}
 	return arg + 3, nil
 }
@@ -50,8 +50,8 @@ func main() {
 	}
 
 	_, e := f2(42)
-	if ae, ok := e.(*argError); ok {		// 类型断言,即e是否是*argError的实现，如果是ok为true，否则ok为false
-		fmt.Println(ae.arg)					// 如果类型断言成功，ae则为argError的指针对象
+	if ae, ok := e.(*argError); ok { // 类型断言,即e是否是*argError的实现，如果是ok为true，否则ok为false
+		fmt.Println(ae.arg) // 如果类型断言成功，ae则为argError的指针对象
 		fmt.Println(ae.prob)
 	}
 }

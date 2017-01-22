@@ -18,11 +18,11 @@ func pong(pings <-chan string, pongs chan<- string) {
 
 func main() {
 
-	pings := make(chan string, 1)			// 不能创建单向channel，编译器会根据函数参数的channel类型进行自动转换
-	pongs := make(chan string, 1)			// 因为pings、pongs均为缓冲channel，因此针对channel的读写操作均为异步
+	pings := make(chan string, 1) // 不能创建单向channel，编译器会根据函数参数的channel类型进行自动转换
+	pongs := make(chan string, 1) // 因为pings、pongs均为缓冲channel，因此针对channel的读写操作均为异步
 
-	ping(pings, "passed message")			// 编译器会自动将pings转换为只写的单向channel
-	pong(pings, pongs)						// 同上，编译器会将pings转换为只读的单向channel，将pangs转换为只写的单向channel
-	fmt.Println(<-pongs)					// 特别注意：单向channel不能转换为普通channel
+	ping(pings, "passed message") // 编译器会自动将pings转换为只写的单向channel
+	pong(pings, pongs)            // 同上，编译器会将pings转换为只读的单向channel，将pangs转换为只写的单向channel
+	fmt.Println(<-pongs)          // 特别注意：单向channel不能转换为普通channel
 
 }
