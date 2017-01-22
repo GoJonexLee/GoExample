@@ -1,4 +1,5 @@
 example来源于：https://gobyexample.com <br/>
+例子中并没有涉及到一下几个主题：反射、组合、日志等<br/>
 除此之外，有很大的补充 <br/>
 
 00: 你好同志<br/>
@@ -66,5 +67,5 @@ example来源于：https://gobyexample.com <br/>
 62: 系统调用<br/>
 63: 监听信号<br/>
 64: 退出<br/>
-65: mysql<br/>
-66: redi是<br/>
+65: Mysql<br/>
+66: Redis<br/>
