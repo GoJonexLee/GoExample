@@ -19,7 +19,7 @@ example来源于：https://gobyexample.com <br/>
 16: 递归<br/>
 17: 指针<br/>
 18: 结构体<br/>
-19: 方法（方法有接受体，函数没有接收体）<br/>
+19: 方法（方法有接收体，函数没有接收体）<br/>
 20: 接口<br/>
 21: 错误类型<br/>
 22: goroutine并行单元<br/>
@@ -55,3 +55,4 @@ example来源于：https://gobyexample.com <br/>
 52: 数字个数化<br/>
 53: url解析<br/>
 56: 读文件<br/>
+57: 写文件<br/>
