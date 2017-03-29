@@ -2,7 +2,7 @@ example来源于：https://gobyexample.com <br/>
 例子中并没有涉及到一下几个主题：反射、组合、日志等<br/>
 除此之外，有很大的补充 <br/>
 
-00: 你好同志<br/>
+00: 你好phper<br/>
 01: 值<br/>
 02: 变量<br/>
 03: 常量<br/>
@@ -59,10 +59,7 @@ example来源于：https://gobyexample.com <br/>
 54: 哈希<br/>
 55: base64编解码<br/>
 56: 读文件<br/>
-<<<<<<< HEAD
 57: 写文件<br/>
-=======
-57: 行读取输入<br/>
 58: 命令行参数<br/>
 59: 命令行标签<br/>
 60: 环境变量<br/>
@@ -72,4 +69,3 @@ example来源于：https://gobyexample.com <br/>
 64: 退出<br/>
 65: Mysql<br/>
 66: Redis<br/>
->>>>>>> b6deb2bb9e17fc2ee68295cf089a3159d8895196
