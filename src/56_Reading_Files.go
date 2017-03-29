@@ -24,7 +24,7 @@ func main() {
 	check(err)
 	fmt.Println(string(dat))
 
-	f, err := os.Open(fileTmp)		// 其实20行的ReadFile()函数内部就调用了os.open()函数
+	f, err := os.Open(fileTmp)		// 在20行的ReadFile()函数内部就调用了os.open()函, 该函数以只读模式打开文件
 	check(err)
 
 	b1 := make([]byte, 5)
