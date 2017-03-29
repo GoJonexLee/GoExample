@@ -1,17 +1,17 @@
 package main
 
 import (
-	"fmt"
 	"bytes"
+	"fmt"
 	"regexp"
 )
 
 func main() {
 
-	match, _ := regexp.MatchString("p([a-z]+)ch", "peach")			// 1次匹配 参数1:模式，参数2:被匹配字符串，返回值：是否匹配成功
+	match, _ := regexp.MatchString("p([a-z]+)ch", "peach") // 1次匹配 参数1:模式，参数2:被匹配字符串，返回值：是否匹配成功
 	fmt.Println(match)
 
-	r, _ := regexp.Compile("p([a-z]+)ch")							// Comple(): 返回匹配器
+	r, _ := regexp.Compile("p([a-z]+)ch") // Comple(): 返回匹配器
 	fmt.Println(r.MatchString("peach"))
 
 	fmt.Println(r.FindString("peach punch"))

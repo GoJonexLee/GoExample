@@ -15,21 +15,21 @@ func main() {
 
 	var state = make(map[int]int)
 
-	var mutex = &sync.Mutex{}					// 互斥量，保证多个goroutine互斥访问
+	var mutex = &sync.Mutex{} // 互斥量，保证多个goroutine互斥访问
 
 	var readOps uint64 = 0
 	var writeOps uint64 = 0
 
-	for r := 0; r < 100; r++ {					// 启动100个goroutine
+	for r := 0; r < 100; r++ { // 启动100个goroutine
 
 		go func() {
 			total := 0
 			for {
-				key := rand.Intn(5)				// 在[0,1,2,3,4]中随机选取一个数
-				mutex.Lock()					// 加锁; 此处可以使用读写锁进行优化
+				key := rand.Intn(5) // 在[0,1,2,3,4]中随机选取一个数
+				mutex.Lock()        // 加锁; 此处可以使用读写锁进行优化
 				total += state[key]
-				mutex.Unlock()					// 释放锁
-				atomic.AddUint64(&readOps, 1)	// 记录读操作的次数
+				mutex.Unlock()                // 释放锁
+				atomic.AddUint64(&readOps, 1) // 记录读操作的次数
 
 				time.Sleep(time.Millisecond)
 			}
@@ -37,16 +37,16 @@ func main() {
 
 	}
 
-	for w := 0; w < 10; w++ {					// 启动10个goroutine
+	for w := 0; w < 10; w++ { // 启动10个goroutine
 
 		go func() {
 			for {
 				key := rand.Intn(5)
 				val := rand.Intn(100)
-				mutex.Lock()					// 加锁
-				state[key] = val				// 设置key-value，有可能重复设置
-				mutex.Unlock()					// 解锁
-				atomic.AddUint64(&writeOps, 1)	// 记录写操作的次数
+				mutex.Lock()                   // 加锁
+				state[key] = val               // 设置key-value，有可能重复设置
+				mutex.Unlock()                 // 解锁
+				atomic.AddUint64(&writeOps, 1) // 记录写操作的次数
 
 				time.Sleep(time.Millisecond)
 			}
@@ -67,4 +67,3 @@ func main() {
 	mutex.Unlock()
 
 }
-

@@ -7,9 +7,9 @@ import (
 
 // 包含三个方法的接口
 type geometry interface {
-	area()  float64			// 无入参，返回float64类型
-	perim() float64			// 同上
-	name(string)			// 入参string类型，无返回值
+	area() float64  // 无入参，返回float64类型
+	perim() float64 // 同上
+	name(string)    // 入参string类型，无返回值
 }
 
 // 结构体rect，通过对象实例实现geometry接口
@@ -65,9 +65,8 @@ func main() {
 	measure(&r)
 
 	//measure(c)		// 不能通过circle的实例对象进行接口的赋值，因为circle是通过指针实现接口的
-	measure(&c)		// 正确方式是这样
+	measure(&c) // 正确方式是这样
 
 	// 总结: 如果是结构体的对象实例实现接口，均可通过对象、指针传入interface的参数中, 例如rect；
 	//		 如果是结构体的指针实例实现接口，则只能通过指针传入interface的参数中，例如circle。
 }
-

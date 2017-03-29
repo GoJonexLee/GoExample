@@ -16,7 +16,7 @@ func main() {
 	sort.Ints(ints)
 	fmt.Println("Ints:", ints)
 
-	s := sort.IntsAreSorted(ints)		// 判断是否有序
+	s := sort.IntsAreSorted(ints) // 判断是否有序
 	fmt.Println("Sorted:", s)
 
 }

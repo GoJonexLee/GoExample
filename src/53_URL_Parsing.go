@@ -15,7 +15,7 @@ func main() {
 		panic(err)
 	}
 
-	fmt.Println(u.Scheme)		// url的协议
+	fmt.Println(u.Scheme) // url的协议
 
 	fmt.Println(u.User)
 	fmt.Println(u.User.Username())

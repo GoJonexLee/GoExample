@@ -13,7 +13,7 @@ import (
 )
 
 func main() {
-	fmt.Println("Hello PHPer, u will stupidly if u don't learn about golang!")
+	fmt.Println("Hello PHPer!")
 }
 
 // 运行命令：go run 01_Hello Word.go
